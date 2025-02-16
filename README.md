@@ -5,9 +5,6 @@
 - [Pré-requisitos](#pré-requisitos)  
 - [Objetivo](#objetivo)  
 - [Metodologia](#metodologia)  
-- [Resultados](#resultados)  
-- [Como Executar](#como-executar)  
-- [Estrutura do Projeto](#estrutura-do-projeto)  
 
 ---
 
@@ -34,10 +31,6 @@ Para rodar o projeto, é necessário ter instalado:
 - Jupyter Notebook v7.0.8  
 - Python v3.12.4  
 - Anaconda v24.9.2 (Ambiente virtual chamado `"infnet-25E1_2"`)  
-- Pacotes Python:
-  ```sh
-  pip install pandas numpy scikit-learn matplotlib seaborn
-  ```
 
 ---
 
@@ -59,10 +52,12 @@ Os resultados serão utilizados para indicar **qual modelo apresenta melhor dese
 - **Normalização dos dados**: Aplicação de `StandardScaler` para padronização das variáveis contínuas.  
 
 ### **2. Modelagem e Treinamento**  
-- Treinamento de três modelos de classificação:  
+- Treinamento de cinco modelos de classificação:  
   - **Regressão Logística**  
   - **Árvore de Decisão**  
   - **SVM (Support Vector Machine)**  
+  - **Random Forest**  
+  - **K-Nearest Neighbors (KNN)**  
 - Aplicação de **validação cruzada estratificada (k=10)** para avaliação dos modelos.  
 - Cálculo das métricas:
   - **Acurácia**
@@ -79,43 +74,3 @@ Os resultados serão utilizados para indicar **qual modelo apresenta melhor dese
 - Aplicação do **melhor modelo** nos vinhos tintos.  
 - Comparação dos resultados com os vinhos brancos.  
 - Avaliação de **possível viés** no modelo ao lidar com os vinhos tintos.  
-
----
-
-## Resultados  
-Os principais resultados obtidos incluem:  
-
-✔ **A Regressão Logística apresentou melhor desempenho**, com **AUC = 0.80 ± 0.02**, tornando-se a **escolha ideal** para classificação dos vinhos.  
-✔ O modelo foi **testado em vinhos tintos** e obteve resultados **razoavelmente consistentes**, indicando boa generalização.  
-✔ **Curvas ROC** e **gráficos de distribuição** foram gerados para análise detalhada do desempenho dos modelos.  
-
----
-
-## Como Executar  
-Clone o repositório e execute os notebooks no **Jupyter Notebook** ou diretamente no terminal usando Python.  
-
-```sh
-git clone https://github.com/ianmsouza/wine_quality_analysis.git
-cd wine_quality_analysis
-jupyter notebook
-```
-
----
-
-## Estrutura do Projeto  
-```
-wine_quality_analysis/
-│── datasets/
-│   ├── winequalityN.csv  # Base original do Kaggle
-│   ├── winequality_white_filtered.csv  # Dados processados para vinhos brancos
-│── notebooks/
-│   ├── wine_quality_analysis.ipynb  # Código principal do projeto
-│── resultados/
-│   ├── model_results.csv  # Resultados das métricas dos modelos
-│── README.md  # Documentação do projeto
-```
-
----
-
-## Conclusão  
-Este projeto demonstrou como **algoritmos de Machine Learning supervisionado** podem ser usados para prever a qualidade de vinhos, baseando-se em suas características físico-químicas.
