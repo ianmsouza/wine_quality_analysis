@@ -1,7 +1,7 @@
 # Projeto da disciplina de algoritmos de inteligência artificial para classificação - 25E1_2  
 
 ## Índice  
-- [Sobre](#sobre)  
+- [Sobre](#Sobre)  
 - [Pré-requisitos](#pré-requisitos)  
 - [Objetivo](#objetivo)  
 - [Metodologia](#metodologia)  
